@@ -1,0 +1,175 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    padding: 150px;
+    background-color: rgb(237, 224, 198);
+}
+.container{
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    background-color: burlywood;
+    
+}
+.name{
+    margin-bottom: 20px;
+    width: 275px;
+    height: 25px;
+}
+.email{
+    margin-bottom: 20px;
+    width: 275px;
+    height: 25px;
+}
+.key{
+    margin-bottom: 20px;
+    width: 275px;
+    height: 25px;
+}
+.name label{
+    padding-right: 10px;
+}
+.email label{
+    padding-right: 40px;
+}
+.key label{
+    padding-right: 18px;
+}
+input{
+    text-align: center;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+h2,p{
+    text-align: center;
+}
+
+.button{
+
+    text-align: center;
+    padding-bottom: 10px;
+}
+.signup{
+    text-align: center;
+}
+.home{
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin: auto;
+    background-color: burlywood;
+    
+    
+    
+}
+.inner{
+    
+    margin-bottom: 20px;
+    width: 275px;
+    height: 150px;
+}
+button{
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+    background-color: rgb(227, 98, 124);
+    font-weight: bolder;
+
+    
+}
+.to{
+    margin-bottom: 20px;
+    width: 275px;
+    height: 25px;
+}
+.to label{
+    padding-right: 40px;
+}
+textarea{
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.show{
+    width:fit-content;
+    height:fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+.msg{
+    margin: 50px;
+    border-radius: 5px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    width:fit-content;
+    height:fit-content;
+    background-color: burlywood;
+    
+}
+.box{
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: burlywood;
+    margin: auto;
+    
+}
+#success{
+height: 100px;
+width: auto;
+border: 2px solid green;
+border-radius: 2px;
+background-color: green;
+margin-bottom: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#alert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100px ;
+    width: auto;
+    border: 2px solid red;
+    border-radius: 2px;
+    background-color: red;
+    margin-bottom: 20px;
+    }
+#box1{
+    font-size: larger;
+    text-align: center;
+    margin: auto;
+    height: 50px;
+    width: 100px;
+    border: 2px solid black;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#box1 a{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: darkblue;
+}
