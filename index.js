@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const Login = require("./models/login");
 const Chat = require("./models/chat");
 const methodOverride=require("method-override");
+const ExpressError=require("./ExpressError");
 
 app.set("views","ejs");
 app.set("views",path.join(__dirname,"/views"));
@@ -23,6 +24,13 @@ main()
 .catch((err)=>{
     console.log("Not connected");
 })
+
+function wrapAsync(fn){
+    return function(req,res,next){
+        fn(req,res,next).catch(e=>next(e));
+    }
+
+}
 
 app.get("/",(req,res)=>{
     res.render("login.ejs");
@@ -100,6 +108,11 @@ app.delete("/chatwave/:id",async (req,res)=>{
     let {id}=req.params;
     let data=await Chat.findByIdAndDelete(id);
     res.send("Deleted");
+});
+
+app.use((err,req,res,next)=>{
+    let {status=500,message="Some Error"} = err;
+    res.status(status).send(message);
 })
 
 app.listen(port,()=>{
