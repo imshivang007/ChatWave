@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        
+    <form method="post" action="/chatwave/<%= data.username %>?_method=PUT">
+            <h2>Sender: <%= data.username %></h2>
+        <div class="to">
+            <label for="to">To:</label>
+            <input type="text" name="to" id="to">
+        </div>
+
+        <textarea name="msg" placeholder="Enter Message" cols="35" rows="6"></textarea><br><br>
+        <div class="button">
+            <button>Send</button>
+        </div>
+        
+        
+        
+    </form>
+    </div>
+    
+    
+</body>
+</html>

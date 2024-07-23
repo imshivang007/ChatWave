@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Message</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <form method="post" action="/chatwave/<%= id %>?_method=PATCH">
+            <h2>Edit Message</h2>
+            <textarea name="msg" placeholder="Enter New Message" rows="6" cols="35"></textarea><br><br>
+            <div class="button">
+                <button>Send!</button>
+            </div>
+            
+        </form>
+    </div>
+    
+</body>
+</html>

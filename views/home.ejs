@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="home">
+        <div class="inner">
+            <h2><%=data.username %> details</h2>
+            <p>Id:<%= data.id %></p>
+            <p>Email:<%= data.email %></p>
+        </div>
+        <div class="form">
+            <form method="get" action="/chatwave/<%= data.username %>/show">
+                <button>Show Recent Messages</button><br><br>
+            </form>
+            <form method="get" action="/chatwave/<%= data.username %>/send">
+                <button>Send Message</button>
+            </form>
+        </div>
+    
+    </div>
+    
+    
+</body>
+</html>

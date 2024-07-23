@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h2>Recent Messages send by <%= sendData[0].username %></h2>
+    <div class="show">
+
+        <% for(let data of sendData){ %>
+            <div class="msg">
+            <p>ID:<%= data.id %></p>
+            <p>To: <%= data.to %></p>
+            <p>Msg: <%= data.msg %> </p>
+            <p>Created: <%= data.created %></p>
+            <form method="get" action="/chatwave/<%= data.id %>/edit">
+                <div class="button">
+                    <button>Edit Message</button>
+                </div>
+                
+            </form>
+            <br>
+            <form method="post" action="/chatwave/<%=data.id %>?_method=DELETE">
+                <div class="button">
+                    <button>Delete Message</button>
+                </div>
+                
+            </form>
+        </div>
+            <% } %>
+    </div>  
+</body>
+</html>
