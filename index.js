@@ -25,13 +25,6 @@ main()
     console.log("Not connected");
 })
 
-function wrapAsync(fn){
-    return function(req,res,next){
-        fn(req,res,next).catch(e=>next(e));
-    }
-
-}
-
 app.get("/",(req,res)=>{
     res.render("login.ejs");
 });
@@ -40,25 +33,32 @@ app.get("/chatwave/Registration",(req,res)=>{
     res.render("registration.ejs");
 });
 
-app.post("/chatwave",async (req,res)=>{
+app.post("/chatwave",async (req,res,next)=>{
     let {username:name,email:em,password:pass} = req.body;
     let data=await Login.findOne({$and:[{username:name},{email:em},{password:pass}]});
-    if(data){
-        res.render("home.ejs",{data})
+    if(!data){
+        next(new ExpressError("Invalid username or password",400));
     }
     else{
-        res.render("alert.ejs");
+        res.render("home.ejs",{data});
     }
 });
 
-app.post("/chatwave/registration",async (req,res)=>{
-    
-    let {username,email,password}=req.body;
+app.post("/chatwave/registration",async (req,res,next)=>{
+    try{
+        let {username,email,password}=req.body;
     
     let user=new Login({username:username,email:email,password:password,created:new Date()});
     user.save();
     
-    // res.render("success.ejs");
+    
+    }
+    catch(err){
+        next(err);
+    }
+    
+    
+    
 });
 
 app.get("/chatwave/:username/send",async (req,res)=>{
