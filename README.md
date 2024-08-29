@@ -48,4 +48,4 @@ We welcome contributions to improve ChatWave! Please fork the repository, create
 
 ## Contact
 
-For questions or support, please reach out to [imshivang007@gmai.com](mailto:your-email@example.com).
+For questions or support, please reach out to [imshivang007@gmail.com](mailto:your-email@example.com).
