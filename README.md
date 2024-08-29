@@ -13,7 +13,7 @@
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/imshivang007/ChatWave.git
-    cd chatwave
+    cd ChatWave
     ```
 
 2. **Install dependencies**:
